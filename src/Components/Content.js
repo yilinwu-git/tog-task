@@ -5,9 +5,10 @@ import '../styles/content.scss';
 
 const Content = ({data}) => {
 
-
+    // declare state variable of click, initialse with false
     const [click, setClick] = useState(false);
 
+    // toggle click function, to show or not show ellipsis content
     const handleClick = () => setClick(!click);
 
     return (

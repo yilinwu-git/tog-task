@@ -13,13 +13,12 @@ function App() {
 const [data, setData] = useState(null);
 
 
+//Fetch Mock Data when component mounts, then update data state
 useEffect(()=>{
 
-  //Fetch Mock Data when component mounts
     const fetchMockData = async() =>{
     try {
       const response = await axios.get('https://mocki.io/v1/0a8a3472-1336-467a-ae37-8ddf0edb26ae');
-      // console.log(response.data);
       setData(response.data);
       
     } catch (error) {
@@ -37,9 +36,12 @@ useEffect(()=>{
     
     <div className="wrapper">
       <Header />
+
       {data &&
         <Content data={data}/>
       }
+
+      {!data && <h1 className="warning-message">sorry, somthing just went wrong!</h1>}
     </div >
 
   );

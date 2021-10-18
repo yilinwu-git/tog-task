@@ -5,14 +5,12 @@ import '../styles/header.scss';
 
 const Header = () => {
 
+    // declare state variable of click, initialse with false
     const [click, setClick] = useState(false);
-    
 
+    // toggle click function, to show or not show slide in navbar in mobile view
     const handleClick = () => setClick(!click);
-    //const closeMobileMenu = () => setClick(false);
     
-
-
 
     return (
         <>

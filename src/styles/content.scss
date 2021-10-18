@@ -65,3 +65,13 @@
 		}
 	}
 }
+
+.warning-message {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10rem;
+	font-size: 2.6rem;
+	color: #d01010;
+	text-transform: capitalize;
+}
