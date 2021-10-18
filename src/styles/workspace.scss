@@ -1,0 +1,70 @@
+.card {
+	margin-bottom: 20px;
+	border-radius: 0;
+	transition: all 0.3s ease;
+
+	&:hover {
+		border: 1px solid #6c6c6c;
+	}
+
+	&-image {
+		width: 100%;
+	}
+
+	&-title {
+		font-size: 2.8rem;
+		margin: 1.2rem .3rem;
+	}
+
+	&-text {
+		font-size: 1.6rem;
+		margin: 0 .3rem 1rem .3rem;
+	}
+
+	.table {
+		margin-left: .5rem;
+	}
+
+	.table-head {
+		font-size: 1.4rem;
+		letter-spacing: 1.5px;
+	}
+
+	.table-body {
+		font-size: 1.5rem;
+		vertical-align: middle;
+		padding-left: .5rem;
+	}
+
+	.room-amount {
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+}
+
+@media only screen and (min-width: 1221px) {
+	.card {
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 1220px) and (min-width: 701px) {
+	.card {
+		width: 45%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.card {
+		width: 100%;
+		margin: 1rem auto;
+
+		&-title {
+			font-size: 2.2rem;
+		}
+
+		&-text {
+			font-size: 1.6rem;
+		}
+	}
+}

@@ -1,0 +1,191 @@
+.navbar-container {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	font-size: 1.6rem;
+	width: 100%;
+}
+
+.nav-menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
+	width: 100%;
+	gap: 2rem;
+	margin-right: 1rem;
+}
+
+.nav-item {
+	display: flex;
+	align-items: center;
+	height: 80px;
+	text-align: center;
+}
+
+.nav-links {
+	color: #000;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.3rem 1rem;
+	position: relative;
+
+	&:hover {
+		color: grey;
+
+		&::after {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&::after {
+		background: none repeat scroll 0 0 transparent;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 2px;
+		left: 50%;
+		position: absolute;
+		background: #000;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 0;
+	}
+}
+
+.fa-bars {
+	color: #000;
+	font-size: 1.8rem;
+}
+
+.menu-icon {
+	display: none;
+}
+
+.contact-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 2rem;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.btn-language {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-bottom: 10px;
+
+	& button {
+		padding-left: 1.2rem;
+		border: 3px grey;
+		border-style: none none none solid;
+		background: none;
+		display: inline-flex;
+		align-items: center;
+
+		& span {
+			width: 8px;
+		}
+	}
+}
+
+@media only screen and (max-width: 812px) and (min-width: 701px) {
+	.main-nav {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nav-menu {
+		gap: .1rem;
+		margin-left: 1rem;
+		padding-left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nav-item {
+		justify-content: space-between;
+	}
+
+	.contact-link {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+
+	.btn-language {
+		width: 100%;
+		margin-left: auto;
+
+		& button {
+			padding-left: .5rem;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.navbar-container {
+		justify-content: center;
+	}
+
+	.navbar-logo {
+		order: 2;
+		width: 100%;
+		text-align: center;
+		padding-left: 5rem;
+	}
+
+	.nav-menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 90vh;
+		position: absolute;
+		top: 100px;
+		left: -100%;
+		opacity: 1;
+		transition: all 0.5s ease;
+
+		&.active {
+			background: #f8f8f8;
+			left: 0;
+			opacity: 1;
+			transition: all 0.5s ease;
+			z-index: 2;
+		}
+	}
+
+	.nav-links {
+		padding: 2rem;
+		width: 100%;
+	}
+
+	.menu-icon {
+		display: block;
+		order: 1;
+		font-size: 1.8rem;
+		cursor: pointer;
+	}
+
+	.fa-times {
+		color: #000;
+		font-size: 1.8rem;
+	}
+
+	.contact-link {
+		order: 3;
+		display: flex;
+		padding-top: 10px;
+	}
+
+	.btn-language {
+		display: none;
+	}
+}

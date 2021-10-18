@@ -2,15 +2,14 @@ import React, {useState, useEffect} from 'react';
 import Content from './Components/Content';
 import Header from './Components/Header';
 import axios from 'axios';
-
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/globals.scss';
 
 
 
 function App() {
 
-
-// declare state variables
+// declare state variables, initialise with value null
 const [data, setData] = useState(null);
 
 
@@ -35,13 +34,14 @@ useEffect(()=>{
 
 
   return (
-    <>
+    <div className="wrapper">
       <Header />
       {data &&
         <Content data={data}/>
       }
-    </>
-  
+    
+    </div >
+
   );
 }
 
