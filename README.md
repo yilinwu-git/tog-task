@@ -5,7 +5,7 @@ The is an React app, please run the app in the development mode with npm start s
 
  ## Solutions:
 
- - Fully responsive page.n
+ - Fully responsive page.
 
  - Fetching mock data using axios.
 
