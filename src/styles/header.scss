@@ -92,7 +92,7 @@
 	}
 }
 
-@media only screen and (max-width: 812px) and (min-width: 701px) {
+@media only screen and (max-width: 1220px) and (min-width: 701px) {
 	.main-nav {
 		padding: 0;
 		display: flex;
@@ -102,7 +102,7 @@
 
 	.nav-menu {
 		gap: .1rem;
-		margin-left: 1rem;
+		margin-left: 2rem;
 		padding-left: 0;
 		display: flex;
 		justify-content: center;
@@ -114,12 +114,11 @@
 	}
 
 	.contact-link {
-		margin-right: 1rem;
+		margin-right: 2rem;
 		margin-left: 1rem;
 	}
 
 	.btn-language {
-		width: 100%;
 		margin-left: auto;
 
 		& button {
@@ -137,7 +136,7 @@
 		order: 2;
 		width: 100%;
 		text-align: center;
-		padding-left: 5rem;
+		padding-left: 6rem;
 	}
 
 	.nav-menu {
@@ -152,19 +151,21 @@
 		left: -100%;
 		opacity: 1;
 		transition: all 0.5s ease;
+		z-index: 1000;
 
 		&.active {
 			background: #f8f8f8;
 			left: 0;
 			opacity: 1;
 			transition: all 0.5s ease;
-			z-index: 2;
+			z-index: 1000;
 		}
 	}
 
 	.nav-links {
 		padding: 2rem;
 		width: 100%;
+		font-size: 1.8rem;
 	}
 
 	.menu-icon {

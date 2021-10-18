@@ -1,33 +1,17 @@
 import React, {useState} from 'react';
 import logo from '../assets/TOG_RGB_Black.png';
 import '../styles/header.scss';
-import Dropdown from './Dropdown';
+
 
 const Header = () => {
 
     const [click, setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
     
-    const handleClick = () => setClick(!click);
-    
-    const closeMobileMenu = () => setClick(false);
-    
-    const onMouseEnter = () => {
-        if(window.innerWidth < 700){
-            setDropdown(false);
-        } else {
-            setDropdown(true);
-        }
-    }
 
+    const handleClick = () => setClick(!click);
+    //const closeMobileMenu = () => setClick(false);
     
-    const onMouseLeave = () => {
-        if(window.innerWidth < 700){
-            setDropdown(false);
-        } else {
-            setDropdown(false);
-        }
-    }
+
 
 
     return (
@@ -43,46 +27,38 @@ const Header = () => {
                     
                     <div className="main-nav">
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                            <li className="nav-item"
-                                onMouseEnter={onMouseEnter}
-                                onMouseLeave={onMouseLeave}
-                            
-                            >
-                                <a href="#locations"className="nav-links" onClick={closeMobileMenu}>
+                            <li className="nav-item">
+                                <a href="#locations"className="nav-links" >
                                     Locations <i className="fas fa-angle-down" />
                                 </a>
-                                {dropdown && <Dropdown />}
                             </li>
 
                             <li className="nav-item">
-                                <a href="#workspaces"className="nav-links" onClick={closeMobileMenu}>
+                                <a href="#workspaces" className="nav-links" >
                                     Work Spaces <i className="fas fa-angle-down" />
                                 </a>
-                                {dropdown && <Dropdown />}
                             </li>
 
                             <li className="nav-item">
-                                <a href="#meetingrooms"className="nav-links" onClick={closeMobileMenu}>
+                                <a href="#meetingrooms" className="nav-links">
                                     Meeting Rooms
                                 </a>
                             </li>
 
                             <li className="nav-item">
-                                <a href="#events"className="nav-links" onClick={closeMobileMenu}>
+                                <a href="#events" className="nav-links" >
                                     Events <i className="fas fa-angle-down" />
                                 </a>
-                                {dropdown && <Dropdown />}
                             </li>
 
                             <li className="nav-item">
-                                <a href="#about"className="nav-links" onClick={closeMobileMenu}>
+                                <a href="#about" className="nav-links" >
                                     About <i className="fas fa-angle-down" />
                                 </a>
-                                {dropdown && <Dropdown />}
                             </li>
 
                             <li className="nav-item">
-                                <a href="#stories"className="nav-links" onClick={closeMobileMenu}>
+                                <a href="#stories"className="nav-links">
                                     Stories
                                 </a>
                             </li>
