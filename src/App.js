@@ -34,12 +34,12 @@ useEffect(()=>{
 
 
   return (
+    
     <div className="wrapper">
       <Header />
       {data &&
         <Content data={data}/>
       }
-    
     </div >
 
   );

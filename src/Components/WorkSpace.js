@@ -14,8 +14,8 @@ const WorkSpace = ({workspace}) => {
             <Card className="card">
                 <Card.Img variant="top" src={workspace.image ? workspace.image : NoImage} alt={workspace.name} className="card-image"/>
                 <Card.Body>
-                    <Card.Title><p className="card-title">{workspace.name}</p></Card.Title>
-                    <Card.Text><p className="card-text">{workspace.address}</p></Card.Text>
+                    <Card.Title className="card-title">{workspace.name}</Card.Title>
+                    <Card.Text className="card-text">{workspace.address}</Card.Text>
                     <hr />
                       
                     <Table  borderless hover>

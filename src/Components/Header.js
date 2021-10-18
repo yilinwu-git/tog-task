@@ -76,7 +76,7 @@ const Header = () => {
 
                             <li className="nav-item">
                                 <a href="#about"className="nav-links" onClick={closeMobileMenu}>
-                                    About <i clasName="fas fa-angle-down" />
+                                    About <i className="fas fa-angle-down" />
                                 </a>
                                 {dropdown && <Dropdown />}
                             </li>
@@ -91,7 +91,7 @@ const Header = () => {
                     </div>
 
                     <div className="contact-link">Contact</div>
-                    <div className="btn-language"><button>EN<span></span><i class="fas fa-angle-down" /></button></div>
+                    <div className="btn-language"><button>EN<span></span><i className="fas fa-angle-down" /></button></div>
                 </nav>
         </>
     )
