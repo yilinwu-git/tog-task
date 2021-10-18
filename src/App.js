@@ -15,29 +15,27 @@ const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-//Fetch Mock Data when component mounts, then update data state
-useEffect(()=>{
+  //Fetch Mock Data when component mounts, then update data state
+  useEffect(()=>{
 
-  const fetchMockData = async() =>{
+    const fetchMockData = async() =>{
 
-    try {
-      const response = await axios.get('https://mocki.io/v1/0a8a3472-1336-467a-ae37-8ddf0edb26ae');
-      setData(response.data);
+      try {
+        const response = await axios.get('https://mocki.io/v1/0a8a3472-1336-467a-ae37-8ddf0edb26ae');
+        setData(response.data);
+        
+      } catch (error) {
+        console.log(error);
+        setHasError(true);
+      }  
       
-    } catch (error) {
-      console.log(error);
-      setHasError(true);
-    }  
-     
-    setIsLoading(false);
+      setIsLoading(false);
 
-  };
+    };
 
-  fetchMockData();
+    fetchMockData();
 
-}, [setData])
-
-
+  }, [setData]);
 
   return (
     
@@ -51,8 +49,6 @@ useEffect(()=>{
       {isLoading && (<h1 className="message message_loading">Loading....</h1>)}
 
       {hasError && <h1 className="message message_warning">sorry, somthing just went wrong!</h1>}
-
-
 
     </div >
 
