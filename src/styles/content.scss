@@ -9,12 +9,14 @@
 		font-weight: 400;
 		margin-top: 2rem;
 		margin-bottom: 2rem;
+		color: var(--black);
 	}
 
 	&-intro {
 		display: flex;
 		font-size: 1.6rem;
 		line-height: 1.5;
+		color: var( --darkgrey);
 
 		.ellipsis-button {
 			display: none;
@@ -72,6 +74,6 @@
 	justify-content: center;
 	margin-top: 10rem;
 	font-size: 2.6rem;
-	color: #d01010;
+	color: var(--error-red);
 	text-transform: capitalize;
 }

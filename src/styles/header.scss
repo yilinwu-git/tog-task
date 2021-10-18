@@ -14,6 +14,7 @@
 	width: 100%;
 	gap: 2rem;
 	margin-right: 1rem;
+	color: var(--black);
 }
 
 .nav-item {
@@ -68,6 +69,7 @@
 	align-items: center;
 	margin-left: 2rem;
 	padding-bottom: 10px;
+	color: var(--black);
 	font-weight: bold;
 }
 
@@ -85,6 +87,7 @@
 		background: none;
 		display: inline-flex;
 		align-items: center;
+		color: var(--darkgrey);
 
 		& span {
 			width: 8px;
@@ -154,7 +157,7 @@
 		z-index: 1000;
 
 		&.active {
-			background: #f8f8f8;
+			background-color: var(--greywhite);
 			left: 0;
 			opacity: 1;
 			transition: all 0.5s ease;

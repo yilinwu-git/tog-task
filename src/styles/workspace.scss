@@ -14,15 +14,18 @@
 	&-title {
 		font-size: 2.8rem;
 		margin: 1.2rem .3rem;
+		color: var(--black);
 	}
 
 	&-text {
 		font-size: 1.6rem;
 		margin: 0 .3rem 1rem .3rem;
+		color: var( --darkgrey);
 	}
 
 	.table {
 		margin-left: .5rem;
+		color: var( --darkgrey);
 	}
 
 	.table-head {
