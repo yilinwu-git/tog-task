@@ -21,7 +21,7 @@ useEffect(()=>{
   const fetchMockData = async() =>{
 
     try {
-      const response = await axios.get('https://mocki.io/v1/0a8a3472-1336-467a-ae37-8ddf0edb26a');
+      const response = await axios.get('https://mocki.io/v1/0a8a3472-1336-467a-ae37-8ddf0edb26ae');
       setData(response.data);
       
     } catch (error) {
@@ -49,7 +49,7 @@ useEffect(()=>{
       }
 
       {isLoading && (<h1 className="message message_loading">Loading....</h1>)}
-      
+
       {hasError && <h1 className="message message_warning">sorry, somthing just went wrong!</h1>}
 
 
