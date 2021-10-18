@@ -1,10 +1,11 @@
 # tog-task
 
- The is an React app, please run the project with npm strategies
+The is an React app, please run the app in the development mode with npm start script. 
 
- ## Solution:
 
- - Fully responsive page.
+ ## Solutions:
+
+ - Fully responsive page.n
 
  - Fetching mock data using axios.
 
@@ -15,6 +16,6 @@
  - there are warnings in console. When rendering a list of items, the best practice is using id from fetching data as a key prop. id is not available in mock data in this task.
 
  - I only use bootstrap components Card and Table for effciently completely this task. Other than these, all the stylings are done with vanilla CSS (Sass).
- 
+
  - This task was deploy to Vercel
 
