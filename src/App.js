@@ -13,6 +13,9 @@ function App() {
 const [data, setData] = useState(null);
 
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
 //Fetch Mock Data when component mounts, then update data state
 useEffect(()=>{
 
@@ -23,12 +26,16 @@ useEffect(()=>{
       
     } catch (error) {
       console.log(error);
-    }   
+      setHasError(true);
+    }  
+     
+    setIsLoading(false);
+
   };
 
   fetchMockData();
 
-}, [])
+}, [setData])
 
 
 
@@ -41,7 +48,10 @@ useEffect(()=>{
         <Content data={data}/>
       }
 
-      {!data && <h1 className="warning-message">sorry, somthing just went wrong!</h1>}
+      {hasError && <h1 className="message message_warning">sorry, somthing just went wrong!</h1>}
+
+      {isLoading && (<h1 className="message message_loading">Loading....</h1>)}
+
     </div >
 
   );

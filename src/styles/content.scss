@@ -68,12 +68,20 @@
 	}
 }
 
-.warning-message {
+.message {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 10rem;
 	font-size: 2.6rem;
-	color: var(--error-red);
 	text-transform: capitalize;
+
+	&_warning {
+		color: var(--error-red);
+	}
+
+	&_loading {
+		color: var(--tog-blue);
+	}
+
 }
